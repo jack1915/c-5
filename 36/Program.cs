@@ -31,4 +31,4 @@ WriteArray(numbers);
 Console.WriteLine();
 
 int quantity = QuantityPositive(numbers);
-Console.WriteLine($"(Сумма нечётных элементов равна:){summ}");
+Console.WriteLine($"(Сумма чисел нечётных элементов массива равна:){summ}");
