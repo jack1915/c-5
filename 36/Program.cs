@@ -1,9 +1,15 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿// // Задача 36: Задайте одномерный массив, заполненный случайными числами. 
+//    Найдите сумму элементов, стоящих на нечётных позициях (индексах).
+
+//    [3, 7, 23, 12] -> 19
+
+//    [-4, -6, 89, 6] -> 0
 int[] numbers = new int[11];
 int summ = 0;
+Random rmd = new Random();
 void Array(int[] array, int min, int max){
   for (int i = 0; i<array.Length; i++ ){
-    array[i] = new Random().Next(min, max);
+    array[i] = rmd.Next(min, max);
   }
 }
 
