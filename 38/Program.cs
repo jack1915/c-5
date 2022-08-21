@@ -1,11 +1,11 @@
 ﻿// Задайте массив вещественных чисел. Найдите разницу между 
 // максимальным и минимальным элементами массива.
 // [3.5, 7.1, 22.9, 2.3, 78.5] -> 76.2
-
+Random rmd = new Random();
 double[] arrayRealNumbers = new double[10];
   for (int i = 0; i < arrayRealNumbers.Length; i++ )
   {
-    arrayRealNumbers[i] = new Random().Next(1, 10);
+    arrayRealNumbers[i] = rmd.Next(-10 , 10);
     Console.Write(arrayRealNumbers[i] + " ");
   }
 
