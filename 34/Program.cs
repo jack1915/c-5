@@ -4,10 +4,10 @@
 //    [345, 897, 568, 234] -> 2
 
 int[] numbers = new int[100];
-
+Random rmd = new Random();
 void FillArray(int[] array, int min, int max){
   for (int i = 0; i<array.Length; i++ ){
-    array[i] = new Random().Next(min, max);
+    array[i] = rmd.Next(min, max);
   }
 }
 
