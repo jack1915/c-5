@@ -3,32 +3,39 @@
 //    Напишите программу, которая покажет количество чётных чисел в массиве.
 //    [345, 897, 568, 234] -> 2
 
-int[] numbers = new int[100];
+int[] numbers = new int[3];
 Random rmd = new Random();
-void FillArray(int[] array, int min, int max){
-  for (int i = 0; i<array.Length; i++ ){
-    array[i] = rmd.Next(min, max);
-  }
-}
-
-void WriteArray(int[] array){
-    for (int i = 0; i<array.Length; i++ ){
-    Console.Write((i+1) + " ");
-    Console.WriteLine(array[i] + " ");
-    
-  }
-  Console.WriteLine();
-}
-
-int QuantityPositive(int[] array){
-    int quantity = 0;
-    for (int i = 0; i<array.Length; i++ ){
-    if (array[i] % 2 == 1)
+void FillArray(int[] array, int min, int max)
+{
+    for (int i = 0; i < array.Length; i++)
     {
-      quantity++;
+        array[i] = rmd.Next(min, max);
     }
-  }
-  return quantity;
+}
+
+void WriteArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write((i + 1) + " ");
+        Console.WriteLine(array[i] + " ");
+
+    }
+    Console.WriteLine();
+}
+
+int QuantityPositive(int[] array)
+{
+    int quantity = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] % 2 == 0)
+            quantity = quantity + 1;
+        {
+            array[i]++;
+        }
+    }
+    return quantity;
 }
 
 FillArray(numbers, 100, 1000);
