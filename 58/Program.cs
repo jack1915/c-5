@@ -11,7 +11,7 @@ int n = InputNumbers("Введите число столбцов 1-й матри
 int p = InputNumbers("Введите число столбцов 2-й матрицы: ");
 int range = InputNumbers("Введите диапазон случайных чисел: от 1 до ");
 
-Random rmd = new Random();
+
 int[,] firstMartrix = new int[m, n];
 CreateArray(firstMartrix);
 Console.WriteLine($"\nПервая матрица:");
@@ -52,11 +52,13 @@ int InputNumbers(string input)
 }
 
 void CreateArray(int[,] array)
+
 {
   for (int i = 0; i < array.GetLength(0); i++)
   {
     for (int j = 0; j < array.GetLength(1); j++)
     {
+      Random rmd = new Random();
       array[i, j] = rmd.Next(range);
     }
   }
